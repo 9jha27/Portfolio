@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<!--Head-->
+    <head>
+        <meta charset="utf-8">
+        <title>Laura Ha</title>
+        <script src="./js/index.js" defer></script>
+        <!-- <script src="./js/contactForm.js" defer></script> -->
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+<!--Body-->
+<body class="background">
+
+<!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#connect">GitHub</a>
+        <a href="#Contact" onclick="openForm()">Contact</a>
+    </div>
+
+<!--Home-->
+        <br>
+        <br>
+
+<!-- Video -->
+    <div id="home">
+        <video autoplay muted loop id="nature_video">
+            <source src="./video/video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+<!-- Video Text -->
+    <div class="Video_Text">
+        <h1 style="color: white;">Laura Ha</h1>
+        <h2 style="color: white;">Software Developer</h2>
+        <p class="center">
+            <strong>
+                Welcome to my portfolio!
+                <br>
+                <br>Here, you will find a collection of my latest works and influences to my personal development style.
+                <br>
+                <br>Thank you for stopping by, and enjoy!
+
+            </strong>
+        </p>
+    </div>
+
+<!-- About Section -->
+    <div class="Row" id="about">
+        <div class="Column_2"> <!-- Left Column -->
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                        <img src="./images/me.JPG" style="width:100%">
+                    <div class="text"></div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                        <img src="./images/html.jpg" style="width:100%">
+                    <div class="text">Solid Front-End Developer</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                        <img src="./images/photo1.jpg" style="width:100%">
+                    <div class="text">Clean Approach</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                        <img src="./images/cSharp.jpg" style="width:100%">
+                    <div class="text">Proficient in C#/.NET Framework</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>        
+                
+        </div>
+    
+
+        <div class="Column_1"> <!-- Right column -->
+            <h1 style="color: black;">About</h1>
+                <p>I am a musician and software developer. I have experience in Full-Stack Development, including but not limited to: 
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>SQL</li>
+                        <li>C# / .NET Framework </li>
+                    </ul>
+                </p>
+                <p>I am a graduate of the <a href="https://learncodinganywhere.com">The Tech Academy</a>.</p>
+                <p>Feel free to <a href=#Contact onclick="openForm()">reach out to me</a> if there is any project you'd like me to contribute to! I am open to learning new languages that will 
+                help contribute to your development needs!</p>
+        </div>
+    </div>
+
+<!-- GitHub section-->
+    <div class="Row" id="connect">
+        <div class="Column_1 connect-with-me">
+            <h1 style="color: black;">Connect With Me</h1>
+                <p><a href="https://github.com/9jha27/">GitHub</a>
+                <p><a href="https://www.linkedin.com/in/laura-jina-ha">LinkedIn</a></p>
+                <p><a href="https://drive.google.com/file/d/1Dh7lxTG5vVM3KxYnsp2ZjB4avpfSWn8a/view?usp=sharing">Resume</a></p>
+                <HR/> 
+                <p>Direct links to projects:</p>
+                <p><a href="https://github.com/9jha27/JavaScript-Projects">JavScript Projects</a>
+                <p><a href="https://github.com/9jha27/C-Sharp-Projects">C# Coding Projects</a>
+        </div>
+
+        <div class="Column_2">
+            <div class="connect-container">
+                <a href="https://github.com/9jha27" target="_blank"><img src="./images/Github.jpg" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/laura-jina-ha"><img src="./images/LinkedIn.jpg" alt="LinkedIn"></a>
+            </div>
+            
+        </div>
+    </div>
+
+<!-- Pop-up contact form -->
+<button class="open-button" id = 'Contact' onclick="openForm()">Contact Laura</button>
+
+<div class="form-popup" id="myForm" method="POST">
+    <contactForm/>
+    <form id="my-form" action="https://formspree.io/f/xknpvywk" class="form-container" method="POST">
+
+        <h1 style="color: black;">Contact Me</h1>
+        <label for="email">Name:</label>
+            <input type="text" name="name" placeholder='Please enter your name here' required>
+        <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" placeholder="Please enter your email here" required>
+        <label for="message">Message:</label>
+            <input type="text" id="Message" name="Message" placeholder="Leave me a message!">
+
+    
+        <button type="submit" class="btn send" id='sendbtn'>Submit</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <p id="my-form-status"></p>
+    </form>
+</div>
+
+
+<!-- Footer section -->
+    <footer>
+        <p class="center">
+            &copy; Laura Ha | 2020
+        </p>
+    </footer>
+
+            
+
+    </body>
+    
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("my-form");
+        var button = document.getElementById("sendbtn");
+        var status = document.getElementById("my-form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "Thanks! I'll get back to you within 24 hours.";
+        }
+
+        function error() {
+            status.innerHTML = "Oops! There was a problem.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });
+        });
+
+        // helper function for sending an AJAX request
+
+        function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+            } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+            }
+        };
+        xhr.send(data);
+        }
+    </script>
+
+</html>

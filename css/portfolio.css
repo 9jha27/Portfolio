@@ -1,0 +1,435 @@
+html {
+	scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+	margin: 0%;
+}
+
+
+.center {
+    text-align: center;
+}
+
+/* Navbar */
+.Navbar {
+	overflow: hidden; 
+	background-color: rgba(0, 0, 0, 0.5); 
+	position: fixed; 
+	top: 0; 
+	width: 100%; 
+	z-index: 1; 
+	opacity: 1;
+	transition: 3s none;
+	-webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 5s;
+}
+
+@keyframes moveNav {
+	from {left: -100vw;}
+	to {left: 0vw;}
+  }
+
+@keyframes movevideoText {
+from {top: -100vw;}
+to {top: 0px;}
+}
+
+
+/* Navbar text */
+.Navbar a {
+	float: left; 
+	display: block; 
+	color: white; 
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: monospace;
+	font-size: 20px; 
+	text-align: center; 
+}
+
+/* Navbar hover */
+.Navbar a:hover {
+	background-color: #F4F4F4; 
+	color: black; 
+	font-weight: bold; 
+	opacity: 0.6;
+  	transition: 0.7s;
+}
+
+/* Navbar home button */
+.Navbar a.active { 
+  background-color: darkgray; 
+}
+
+/* Video */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+#nature_video {
+	position: fixed; 
+	right: 0; 
+	bottom: 0; 
+	min-width: 100%; 
+	z-index: -1;
+	animation: zoominoutsinglefeatured 5s;
+}
+
+/* Text over the video */
+
+.Video_Text { 
+	background: rgba(0, 0, 0, 0.5); 
+	color: white; 
+	width: 100%;
+	padding: 20px;
+	margin-top: 23%;
+	position: relative;
+	-webkit-animation: moveNav 4s;
+	animation: movevideoText 4s;
+}
+
+/* Column Sizing */
+
+* { 
+	box-sizing: border-box; 
+}
+.Column_1 {
+	float: left;  
+	width: 50%; 
+	padding: 1.6%; 
+	padding-top: 3%; 
+	height: 448px; 
+	background-color: honeydew; 
+	position: relative;
+}
+
+.Column_2 {
+	float: left;
+	width: 50%;
+	padding: 1.6%;
+	height: 448px;
+	background-color: #4d4d4d;
+	position: relative;
+}
+
+
+.Row:after { 
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+
+/*SLIDESHOW*/
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 600px;
+	position: relative;
+	margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+	display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+	font-family: 'Courier New', Courier, monospace;
+	color: darkseagreen;
+	font-size: 1vw;
+	font-weight: bold;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+
+/* Heading 1 elements */
+h1 {
+	text-transform: uppercase;
+	font-family: 'Courier New', Courier, monospace; 
+	text-align: center;
+	margin-top: 3%; 
+	color: white;
+	letter-spacing: .2vw;
+}
+
+h2 {
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	margin-top: 1%;
+}
+
+/* Paragraph elements */
+p {
+	font-family: monospace;
+	text-align: justify;
+	letter-spacing: 1px; 
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+li {
+	font-family: monospace;
+	text-align: center;
+	letter-spacing: 1px; 
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Center align elements */
+center {
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Anchor elements */
+a {
+    color: #4eaadf; 
+}
+
+/* Quotation elements */
+q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/*List element*/
+ul {
+	list-style-type: none;
+}
+
+/* Image elements */
+img {
+	filter: saturate(60%); 
+    border-radius: 8px; 
+    max-width: 100%; 
+    height: 340px; 
+	margin-left: auto; 
+    margin-right: auto;
+	display: block;	
+}
+
+/*Connect With Me Section*/
+.Column_1.connect-with-me p{
+	text-align: center;
+}
+.Column_1.connect-with-me a{
+	font-family: monospace;
+	letter-spacing: 1px; 
+	font-size: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+.hr{
+	width: 75%;
+	size: 4;
+}
+
+.Column_2.connect-container{
+	position: relative;
+	display: inline-block;
+	padding: auto;
+}
+
+.Column_2 img{
+	display: inline-block;
+	padding: 5px;
+}
+
+
+
+/* Pop-Up Contact form */
+
+/*Open Button*/
+.open-button {
+	background-color: lightslategray;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 23px;
+	right: 28px;
+	width: 280px;
+	-webkit-animation: movePopup 5s;
+	animation: movePopup 5s;
+}
+
+@keyframes movePopup {
+	from {right: -40vw;}
+	to {bottom: 1.75vw;}
+  }
+  
+.form-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid black;
+	background-color: cadetblue;
+	z-index: 9;
+}
+
+
+.form-container {
+	max-width: 400px;
+	max-height: 500px;
+	padding: 10px;
+	background-color: cadetblue;
+}
+
+.form-container input[type=text] { 
+	width: 100%;
+	padding: 15px;
+    border: none;
+    margin-top: 6px 0 22px 0;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+
+label {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: white;
+	letter-spacing: .2vw;
+}
+/* Submit button */
+.form-container .btn { 
+	background-color: #4d4d4d;
+	color: white;
+	font-weight: bold;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+	font-family: 'Courier New', Courier, monospace;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+.form-container .btn:hover {
+	opacity: 1;
+}
+
+/* Hover effect for send button */
+.form-container .send {
+	background-color: #4d4d4d;
+	color: white;
+	border: 2px black;
+
+}
+
+
+
+/* Paragraph element hover effect */
+p:hover {
+    transition: transform 1s;
+	transform: scale(1.01);
+}
+
+/* Heading 1 element hover effect */
+h1:hover {
+	color: black;
+	font-weight: normal; 
+}
+
+/* Image element hover effects */
+img:hover {
+	filter: grayscale(5%);  
+    transition: transform 1s;
+	transform: scale(1.1);
+}
+
+/* Footer element */
+footer {
+	padding: 2%;
+	background-color:white;
+}
