@@ -6,4 +6,4 @@ I created my website using HTML, CSS, and JavaScript and am quite proud of the o
 
 Take a poke around. 
 
-If you'd like to visit the site, you can visit [here](laura-ha.com).
+If you'd like to visit the site, you can visit [here](http://laura-ha.com).
