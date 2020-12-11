@@ -3,6 +3,7 @@
 Welcome to my portfolio!
 
 I created my website using HTML, CSS, and JavaScript and am quite proud of the outcome I had considering I did not use too many other libraries!
+I used AJAX to create my asynchronous contact form. 
 
 Take a poke around. 
 
